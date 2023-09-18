@@ -40,11 +40,11 @@ def main():
     print(df1)
 
     # compute summary statistics
-    df2 = describe_file(data1)
+    df2 = describe_file(df1)
     print(df2)
 
     # generate plot
-    plot_file(data1)
+    plot_file(df1)
 
 
 if __name__ == "__main__":
