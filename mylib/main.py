@@ -14,10 +14,12 @@ def summary_statistics(data1):
     """provide sumamry statistics to numeric type data"""
     return describe_file(data1)
 
+
 def generate_html(data1):
     """generate a html file for summary statistics"""
     save_table_html(data1)
-    
+
+
 def visualization(data1):
     "Plotting relationship between two variables"
     plot_file(data1)

@@ -20,10 +20,13 @@ def describe_file(dataframe):
     """Describe the data frame"""
     summary_statistics = dataframe.describe()
     return summary_statistics
-    
+
+
 def save_table_html(dataframe):
-    describe_file(dataframe).to_html("summary_statistics.html")
-    
+    """save summary statistics to markwodn file"""
+    describe_file(dataframe).to_html("output/summary_statistics.html")
+
+
 def plot_file(dataframe):
     """Plot relationship in a dataframe"""
     fig, ax = plt.subplots()
