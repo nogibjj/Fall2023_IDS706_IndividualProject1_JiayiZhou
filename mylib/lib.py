@@ -30,7 +30,7 @@ def plot_file(dataframe):
 
 def save_figure(dataframe):
     # Save the plot as a figure
-    plot_file(dataframe).savefig("Year vs Goose.png")
+    plot_file(dataframe).savefig("output/YearGoose.png")
 
 def main():
     """Main function to run the functions"""
