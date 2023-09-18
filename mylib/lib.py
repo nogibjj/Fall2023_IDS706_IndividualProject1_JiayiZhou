@@ -9,11 +9,12 @@ def read_file(input1):
         data = pd.read_csv(input1)
         return data
     except FileNotFoundError:
-        print(f"File {file_path} not found")
+        print(f"File {input1} not found")
         return None
     except Exception as error:
         print(f"Error while loading CSV File: {str(error)}")
         return None
+
 
 def describe_file(dataframe):
     """Describe the data frame"""
@@ -23,17 +24,21 @@ def describe_file(dataframe):
 
 def plot_file(dataframe):
     """Plot relationship in a dataframe"""
-    plt.scatter(dataframe["year"], dataframe["gwar"])
-    plt.title("Start year of season vs Goose Wins Above Replacement")
-    plt.xlabel("Start year of season")
-    plt.ylabel("Goose Wins Above Replacement")
+    fig, ax = plt.subplots()
+    ax.scatter(dataframe["year"], dataframe["gwar"])
+    ax.set_title("Start year of season vs Goose Wins Above Replacement")
+    ax.set_xlabel("Start year of season")
+    ax.set_ylabel("Goose Wins Above Replacement")
+    return fig
+
 
 def save_figure(dataframe):
+    """Save figure"""
     # Save the plot as a figure
     plot_file(dataframe).savefig("output/YearGoose.png")
 
-def main():
-    """Main function to run the functions"""
+
+if __name__ == "__main__":
     data1 = "https://raw.githubusercontent.com/fivethirtyeight/data/master/goose/goose_rawdata.csv"
     # read dataset
     df1 = read_file(data1)
@@ -45,7 +50,3 @@ def main():
 
     # generate plot
     plot_file(df1)
-
-
-if __name__ == "__main__":
-    main()
