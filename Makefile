@@ -4,7 +4,7 @@ install:
 
 test:
 	python -m pytest -vv --cov=main --cov=mylib test_*.py
-	py.test --nbval-lax *.ipynb
+	python -m pytest --nbval *.ipynb
 
 format:	
 	black *.py 
