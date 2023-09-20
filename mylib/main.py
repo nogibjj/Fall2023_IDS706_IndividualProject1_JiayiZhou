@@ -2,7 +2,6 @@
 Main cli or app entry point
 """
 import sys
-import pandas as pd
 try:
     import lib
 except ModuleNotFoundError:
