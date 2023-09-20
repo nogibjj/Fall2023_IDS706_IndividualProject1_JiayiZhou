@@ -1,4 +1,4 @@
-name: OnInstall
+name: Install
 
 on:
   push:
