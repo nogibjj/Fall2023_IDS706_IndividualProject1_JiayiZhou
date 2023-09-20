@@ -2,13 +2,9 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
-install:
-	pip install --upgrade pip &&\
-		pip install -r requirements.txt
-
 test:
 	python -m pytest --nbval mylib/*.ipynb
-	python -m pytest -vv --cov=mylib.lib
+	python -m pytest -vv --cov=mylib.lib --cov=mylib.main
 
 format:	
 	black mylib/*.py
