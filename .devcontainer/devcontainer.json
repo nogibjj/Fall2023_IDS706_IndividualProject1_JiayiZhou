@@ -8,10 +8,9 @@
 		"context": ".."
 	},
 	"features": {
-		"ghcr.io/devcontainers/features/nvidia-cuda:1": {
-			"installCudnn": true
-		},
-		"ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {}
+		"ghcr.io/devcontainers/features/nvidia-cuda:1": { 
+		  "installCudnn": true
+		}
 	  },
 
 	// Configure tool-specific properties.
@@ -52,10 +51,7 @@
 				"ms-toolsai.jupyter-renderers",
 				"ms-python.vscode-pylance",
 				"ms-python.python",
-				"ms-vscode.makefile-tools",
-				"ms-python.pylint",
-				"ms-toolsai.jupyter",
-				"GitHub.copilot"
+				"ms-vscode.makefile-tools"
 			]
 		}
 	},
@@ -71,8 +67,7 @@
 		"--security-opt",
 		"seccomp=unconfined",
 		"--privileged",
-		"--init",
-		//"--gpus", "all"
+		"--init"
 	],
 	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
