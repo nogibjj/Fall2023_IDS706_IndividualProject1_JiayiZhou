@@ -40,7 +40,7 @@ def save_to_markdown(data1):
         file.write("Describe:\n")
         file.write(markdown_table1)
         file.write("\n\n")  # Add a new line
-        file.write("![YearGoose](output/YearGoose.png)\n")
+        file.write("![YearGoose](YearGoose.png)\n")
 
 
 if __name__ == "__main__":
