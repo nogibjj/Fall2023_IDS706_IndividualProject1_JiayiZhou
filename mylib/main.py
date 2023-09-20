@@ -2,10 +2,11 @@
 Main cli or app entry point
 """
 import sys
+
 try:
     import lib
 except ModuleNotFoundError:
-    sys.path.insert(1, './mylib')
+    sys.path.insert(1, "./mylib")
     import lib
 
 
@@ -30,6 +31,18 @@ def visualization(data1):
     lib.save_figure(data1)
 
 
+def save_to_markdown(data1):
+    """save summary report to markdown"""
+    describe_df = lib.describe_file(data1)
+    markdown_table1 = describe_df.to_markdown()
+    # Write the markdown table to a file
+    with open("output/summary_report.md", "w", encoding="utf-8") as file:
+        file.write("Describe:\n")
+        file.write(markdown_table1)
+        file.write("\n\n")  # Add a new line
+        file.write("![YearGoose](output/YearGoose.png)\n")
+
+
 if __name__ == "__main__":
     df1 = read_in_file(
         "https://raw.githubusercontent.com/fivethirtyeight/data/master/goose/goose_rawdata.csv"
@@ -37,3 +50,4 @@ if __name__ == "__main__":
     summary_table = summary_statistics(df1)
     visualization(df1)
     generate_html(df1)
+    save_to_markdown(df1)
