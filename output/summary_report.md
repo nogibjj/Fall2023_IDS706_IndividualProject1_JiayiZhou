@@ -10,4 +10,4 @@ Describe:
 | 75%   |  2003      |      6       |       2       |     2       |             0.768881  |   103       |          0.733881  |     0.462547  |
 | max   |  2017      |     82       |      22       |    23       |             0.821815  |   129       |          0.786815  |     7.54336   |
 
-![YearGoose](output/YearGoose.png)
+![YearGoose](YearGoose.png)
