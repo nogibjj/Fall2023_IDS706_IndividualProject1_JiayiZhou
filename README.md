@@ -5,7 +5,7 @@
 ## Fall2023_IDS706 Individual Project 1
 
 ### Purpose
-This is for class data engineering individual project 1. It uses a Python Ruff GitHub template with pandas to run and test a function that provides summary statistics and data visualization for a data frame. It utilizes continuous integration using GitHub Actions.
+This is for class data engineering individual project 1. It uses a Python Ruff GitHub template with pandas to run and test a function that provides summary statistics and data visualization. It utilizes continuous integration using GitHub Actions.
 
 ### Steps
 I created the template based on the template created by Professor Noah Gift and modified the template. Based on the template from professor, I made the following changes:
