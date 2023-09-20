@@ -4,7 +4,7 @@ install:
 
 test:
 	python -m pytest --nbval mylib/*.ipynb
-	python -m pytest -vv --cov=mylib.lib --cov=mylib.main
+	python -m pytest -vv --cov=mylib.lib --cov=mylib.script
 
 format:	
 	black mylib/*.py
@@ -18,7 +18,7 @@ all: install lint test format
 
 generate_and_push:
 	# Create the markdown file (assuming it's generated from the plot)
-	python mylib/main.py  # Replace with the actual command to generate the markdown
+	python mylib/script.py  # Replace with the actual command to generate the markdown
 
 	# Add, commit, and push the generated files to GitHub
 	@if [ -n "$$(git status --porcelain)" ]; then \
