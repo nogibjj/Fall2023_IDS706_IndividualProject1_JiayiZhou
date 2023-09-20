@@ -15,9 +15,9 @@ def test_read():
 def test_describe():
     "test function for descriptive statistics"
     df1 = main.summary_statistics(test_read())
-    assert df1[["describe", "year"]][4, 1] == 1921.0
-    assert df1[["describe", "ppf"]][0, 1] == 30962.0
-    assert df1[["describe", "ppf"]][4, 1] == 88.0
+    assert df1["year"]["min"] == 1921.0
+    assert df1["ppf"]["count"] == 30962.0
+    assert df1["ppf"]["min"] == 88.0
 
 
 def test_plot():
