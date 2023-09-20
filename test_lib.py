@@ -11,7 +11,6 @@ def test_read():
         "https://raw.githubusercontent.com/fivethirtyeight/data/master/goose/goose_rawdata.csv"
     )
     assert isinstance(df1, pd.DataFrame), "Fail to read the csv file"
-    return df1
 
 
 def test_describe():
@@ -35,3 +34,23 @@ def test_plot():
         )
     )
     assert True, "Plot generation successed"
+
+
+def test_html():
+    "test function for save table"
+    save_table_html(
+        read_file(
+            "https://raw.githubusercontent.com/fivethirtyeight/data/master/goose/goose_rawdata.csv"
+        )
+    )
+    assert True, "Markdown save successed"
+
+
+def test_figure():
+    "test function for save figure"
+    save_figure(
+        read_file(
+            "https://raw.githubusercontent.com/fivethirtyeight/data/master/goose/goose_rawdata.csv"
+        )
+    )
+    assert True, "Plot save successed"
