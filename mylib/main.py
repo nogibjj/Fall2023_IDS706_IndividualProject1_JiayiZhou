@@ -1,29 +1,34 @@
 """
 Main cli or app entry point
 """
-
-from lib import read_file, describe_file, save_table_html, plot_file, save_figure
+import sys
+import pandas as pd
+try:
+    import lib
+except ModuleNotFoundError:
+    sys.path.insert(1, './mylib')
+    import lib
 
 
 def read_in_file(filename):
     """read in a file"""
-    return read_file(filename)
+    return lib.read_file(filename)
 
 
 def summary_statistics(data1):
     """provide sumamry statistics to numeric type data"""
-    return describe_file(data1)
+    return lib.describe_file(data1)
 
 
 def generate_html(data1):
     """generate a html file for summary statistics"""
-    save_table_html(data1)
+    lib.save_table_html(data1)
 
 
 def visualization(data1):
     "Plotting relationship between two variables"
-    plot_file(data1)
-    save_figure(data1)
+    lib.plot_file(data1)
+    lib.save_figure(data1)
 
 
 if __name__ == "__main__":
