@@ -9,6 +9,7 @@ def test_read():
         "https://raw.githubusercontent.com/fivethirtyeight/data/master/goose/goose_rawdata.csv"
     )
     assert isinstance(df1, pd.DataFrame), "Fail to read the csv file"
+    return df1
 
 
 def test_describe():
