@@ -2,7 +2,7 @@
 Main cli or app entry point
 """
 
-from lib import read_file, describe_file, save_table_html, plot_file, save_figure
+from mylib.lib import read_file, describe_file, save_table_html, plot_file, save_figure
 
 
 def read_in_file(filename):
