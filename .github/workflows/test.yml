@@ -28,18 +28,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ml_pipeline-artifacts
-          path: ${{ github.workspace }}/output      
-      
-      - name: Save to repository
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          if [ -z "${GH_TOKEN}" ]; then
-            echo "GH_TOKEN is not defined or empty."
-          else
-            echo "GH_TOKEN: ${GH_TOKEN}"
-          git config --global user.name 'github-actions'
-          git config --local user.email "action@github.com"
-          git add .
-          git commit -m "Add results"
-          git push
+          path: ${{ github.workspace }}/output
