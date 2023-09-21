@@ -7,12 +7,12 @@ test:
 	python -m pytest -vv --cov=mylib.lib --cov=mylib.script test_*.py
 
 format:	
-	black mylib/*.py
+	black *.py
 	nbqa black mylib/*.ipynb 
 
 lint:
 	nbqa ruff mylib/*.ipynb
-	ruff check mylib/*.py
+	ruff check *.py
 		
 all: install lint test format
 
