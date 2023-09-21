@@ -42,6 +42,12 @@ I created the template based on the template created by Professor Noah Gift and 
 6. Added test cases in `test_lib.py`
 7. Added test cases in `test_script.py`
 
+### Check format and error:
+Make test, make format, and make lint are run in actions. The commands run smoothly.  
+<img width="956" alt="Screenshot 2023-09-20 at 10 12 19 PM" src="https://github.com/nogibjj/Fall2023_IDS706_IndividualProject1_JiayiZhou/assets/143651921/85cd3b5b-9eaf-4b06-b957-cfc62b13af2e">  
+<img width="271" alt="Screenshot 2023-09-20 at 10 09 32 PM" src="https://github.com/nogibjj/Fall2023_IDS706_IndividualProject1_JiayiZhou/assets/143651921/bd8dda2b-2afb-42da-9478-57d30cd3b7bb">  
+<img width="226" alt="Screenshot 2023-09-20 at 10 11 34 PM" src="https://github.com/nogibjj/Fall2023_IDS706_IndividualProject1_JiayiZhou/assets/143651921/ec75bc33-af13-475f-94a8-e5afdbef3859">
+
 ### Dataset
 The dataset is loaded in based on url.  Here is the url: [(https://raw.githubusercontent.com/fivethirtyeight/data/master/goose/goose_rawdata.csv)](https://raw.githubusercontent.com/fivethirtyeight/data/master/goose/goose_rawdata.csv). The file is a comma-separated value spreadsheet (CSV) called goose_rawdata.csv.  
 <img width="497" alt="Screenshot 2023-09-12 at 10 19 05 PM" src="https://github.com/nogibjj/Fall2023_IDS706_MiniProject3_JiayiZhou/assets/143651921/ca45cc76-2d2e-4d26-a2b5-6bff9dcaf0ee">
