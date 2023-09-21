@@ -7,6 +7,8 @@
 ### Purpose
 This is for class data engineering individual project 1. It uses a Python Ruff GitHub template with pandas to run and test a function that provides summary statistics and data visualization. It utilizes continuous integration using GitHub Actions to automatically set up environment, test, format and lint code.
 
+### Video
+Here is the link for youtube: https://youtu.be/UqX_fCYPfbE
 ### Structure
 1. `Jupyter Notebook(mylib/describe_file.ipynb)`:
   * Contains cells that perform descriptive statistics using Pandas.
