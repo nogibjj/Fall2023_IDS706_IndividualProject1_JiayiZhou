@@ -4,7 +4,7 @@ install:
 
 test:
 	python -m pytest --nbval mylib/*.ipynb
-	python -m pytest -vv --cov=mylib.lib --cov=mylib.script
+	python -m pytest -vv --cov=mylib.lib --cov=mylib.script test_*.py
 
 format:	
 	black mylib/*.py
